@@ -1,0 +1,12 @@
+dev\patika\creditscore\service\CreditScoreService.class
+dev\patika\creditscore\entity\enumeration\CreditResult.class
+dev\patika\creditscore\exceptions\NoUserExistWithThisID.class
+dev\patika\creditscore\entity\CreditScoreInformation.class
+dev\patika\creditscore\repository\CreditApplicationApprovalRepository.class
+dev\patika\creditscore\controller\CreditScoreController.class
+dev\patika\creditscore\entity\ErrorsResponseEntity.class
+dev\patika\creditscore\exceptions\GlobalExceptionHandler.class
+dev\patika\creditscore\exceptions\WrongIdentificationNumber.class
+dev\patika\creditscore\config\SwaggerConfig.class
+dev\patika\creditscore\CreditScoreApplication.class
+dev\patika\creditscore\dto\CreditScoreInfoRequestDTO.class
