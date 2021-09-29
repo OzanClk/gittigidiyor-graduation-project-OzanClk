@@ -1,6 +1,7 @@
 package dev.patika.userservice.dto.requestDTO;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import dev.patika.userservice.entity.Address;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,7 +21,7 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 public class CustomerRequestDTO {
 
-    @ApiModelProperty(hidden = true,example = "Enter the customer_id for the update method")
+    @ApiModelProperty(hidden = true)
     private long id;
 
     @ApiModelProperty(
@@ -28,7 +29,7 @@ public class CustomerRequestDTO {
             example = "Koray",
             position = 1)
     @NotEmpty
-    @Pattern(regexp = "[^0-9]")
+    //@Pattern(regexp = "[^0-9]")
     private String firstname;
 
     @ApiModelProperty(
@@ -47,36 +48,14 @@ public class CustomerRequestDTO {
 
     @ApiModelProperty(
             dataType = "String",
-            example = "KorayGuney",
-            position = 4)
-    @NotEmpty
-    private String userName;
-
-
-    @ApiModelProperty(
-            dataType = "String",
-            example = "*********",
-            position = 5)
-    @NotEmpty
-    private String password;
-
-    @ApiModelProperty(
-            dataType = "String",
             example = "554325234",
-            position = 6)
+            position = 4)
     @NotEmpty
     private String phoneNumber;
 
-    @ApiModelProperty(
-            dataType = "String",
-            example = "admin",
-            position = 7)
-    @NotEmpty
-    private String userType;
-
-    @ApiModelProperty(position = 8)
+    @ApiModelProperty(position = 5)
     @NotNull
-    private Address address;
+    private AddressDTO address;
 
 
 }
