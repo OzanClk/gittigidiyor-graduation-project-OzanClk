@@ -1,14 +1,11 @@
 package dev.patika.creditscore.dto;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 
-/*import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;*/
 
 
 @Data
@@ -18,32 +15,38 @@ import javax.validation.constraints.Pattern;*/
 public class CreditScoreInfoRequestDTO {
 
 
-    //@NotEmpty
-    //@Pattern(regexp = "[^0-9]")
-    //@Valid
-    private String firstName;
+    @ApiModelProperty(
+            dataType = "String",
+            example = "Koray",
+            position = 1)
+    private String firstname;
 
 
-    //@NotEmpty
-    //@Pattern(regexp = "[^0-9]")
-    //@Valid
-    private String lastName;
+    @ApiModelProperty(
+            dataType = "String",
+            example = "Güney",
+            position = 2)
+    private String lastname;
 
 
-    //@NotEmpty
-    //@Pattern(regexp = "^[1-9]{1}[0-9]{9}[02468]{1}$")
-    //@Valid
+    @ApiModelProperty(
+            dataType = "String",
+            example = "5554443322",
+            position = 3)
     private String identificationNumber;
 
 
-    //@NotEmpty
-    //@Pattern(regexp = "^(05)([0-9]{2})\\s?([0-9]{3})\\s?([0-9]{2})\\s?([0-9]{2})$")
-    //@Valid
+    @ApiModelProperty(
+            dataType = "String",
+            example = "05324423413",
+            position = 4)
     private String phoneNumber;
 
 
-    //@NotNull
-    //@Valid
+    @ApiModelProperty(
+            dataType = "Double",
+            example = "5600",
+            position = 5)
     private double monthlyIncome;
 
 

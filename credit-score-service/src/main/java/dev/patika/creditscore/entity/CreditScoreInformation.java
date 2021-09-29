@@ -6,6 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.LocalDate;
+
 
 @Document
 public class CreditScoreInformation {
@@ -14,10 +16,10 @@ public class CreditScoreInformation {
     private String Id;
 
     @Field
-    private String firstName;
+    private String firstname;
 
     @Field
-    private String lastName;
+    private String lastname;
 
     @Field
     private String identificationNumber;
@@ -34,6 +36,17 @@ public class CreditScoreInformation {
     @Field
     private double creditLimit;
 
+    @Field
+    private String creditApplicationDate;
+
+    public String getCreditApplicationDate() {
+        return creditApplicationDate;
+    }
+
+    public void setCreditApplicationDate(String creditApplicationDate) {
+        this.creditApplicationDate = creditApplicationDate;
+    }
+
     public String getId() {
         return Id;
     }
@@ -43,19 +56,19 @@ public class CreditScoreInformation {
     }
 
     public String getFirstName() {
-        return firstName;
+        return firstname;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.firstname = firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return lastname;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.lastname = lastName;
     }
 
     public String getIdentificationNumber() {
