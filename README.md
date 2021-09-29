@@ -29,11 +29,7 @@ Sample Users:
 
 *Username**: user1 **Password**:123456  --- **Username**: user2   **Password**: 123456 --- **Username**: user3  **Password**: 123456 
 
-**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/user-service" rel="some text">User Service Details </a>**
 
-**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/credit-score-service" rel="some text">Credit Score Service Details </a>**
-
-**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/login-service" rel="some text">Login Service Details</a>**
 
 
 ## Project Architecture
@@ -44,6 +40,13 @@ Spring Security was used within the scope of the login service. The requests fro
 ![Capture](https://user-images.githubusercontent.com/67712162/135337656-53615296-ad48-4839-a04a-1b73701a62df.JPG)
 
 
+Details of services;
+
+**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/user-service" rel="some text">User Service Details </a>**
+
+**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/credit-score-service" rel="some text">Credit Score Service Details </a>**
+
+**<a href="https://github.com/113-GittiGidiyor-Java-Spring-Bootcamp/gittigidiyor-graduation-project-OzanClk/tree/main/login-service" rel="some text">Login Service Details</a>**
 
 ## Swagger Document and Rest APIs on Elasticbeanstalk
 
