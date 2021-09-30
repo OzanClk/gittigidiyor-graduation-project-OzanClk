@@ -1,6 +1,8 @@
 package dev.patika.creditscore.service;
 
 
+import com.twilio.rest.api.v2010.account.Message;
+import com.twilio.type.PhoneNumber;
 import dev.patika.creditscore.dto.CreditScoreInfoRequestDTO;
 import dev.patika.creditscore.entity.CreditScoreInformation;
 import dev.patika.creditscore.entity.enumeration.CreditResult;
@@ -44,6 +46,8 @@ public class CreditScoreServiceImpl {
         creditScoreInformation.setCreditApplicationDate(creditApplicationDateTime());
 
         creditApplicationApprovalRepository.save(creditScoreInformation);
+
+        sendSMS(creditScoreInformation);
 
         if (creditScoreInformation.getCreditResult() == CreditResult.CONFIRM)
             return "Your loan application has been " + CreditResult.CONFIRM + " Your loan limit is " + creditScoreInformation.getCreditLimit() + " $";
@@ -107,4 +111,26 @@ public class CreditScoreServiceImpl {
 
         return formatDateTime;
     }
+
+    public void sendSMS(CreditScoreInformation creditScoreInformation) {
+
+        String smsMessage = "";
+        String phoneNumber = "+90"+creditScoreInformation.getPhoneNumber();
+
+        if (creditScoreInformation.getCreditResult() == CreditResult.CONFIRM) {
+            smsMessage = "Dear " + creditScoreInformation.getFirstName() + " " + creditScoreInformation.getLastName() + " Credit Application has been CONFIRM. Your limit " + creditScoreInformation.getCreditLimit() + " $";
+        } else {
+            smsMessage = "Dear " + creditScoreInformation.getFirstName() + " " + creditScoreInformation.getLastName() + "Credit Application has been REFUSE.";
+        }
+
+        Message message = Message.creator(new PhoneNumber(phoneNumber), new PhoneNumber("+15153033555"), smsMessage).create();
+
+        if ("sent".equals(message.getStatus()) || "queued".equals(message.getStatus())) {
+            System.out.println("SMS Sended");
+        }
+
+
+    }
+
+
 }
