@@ -8,9 +8,13 @@
 
 
 
-- With the information entered by the user, the credit result is shown to the user and the credit limit is assigned.If the credit application is approved, the result is CONFIRM, and if it is not approved, the result is REFUSE.
+- With the information entered by the user, the credit result is shown to the user and the credit limit is assigned.If the credit application is approved,SMS send the result is CONFIRM, and if it is not approved, the result is REFUSE.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/67712162/135359542-f1be1294-fabf-4314-8e76-7f8c715bb174.JPG" />
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/67712162/135435658-5b48ebf3-b9e0-4b29-943d-d6acf0b41cc4.JPG" />
 </p>
 
 ![Credit-Service2](https://user-images.githubusercontent.com/67712162/135358846-04bd5708-2976-4237-be18-d13b518fe18b.JPG)
