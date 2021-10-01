@@ -10,7 +10,7 @@ Users defined as admin can add, update and delete users to the system through th
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/67712162/135354989-45ee89a1-c62d-452e-b011-3f440096d4b1.JPG" />
+  <img src="https://user-images.githubusercontent.com/67712162/135620005-c28fffd3-66a6-43ac-83e5-3834cb0f6a4e.JPG" />
 </p>
 
 
